@@ -16,7 +16,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %if %mdkversion > 200600
 BuildRequires:	X11-devel
 %else
-BuildRequires:	XFree86-devel
+BuildRequires:	X11-devel
 %endif
 
 %description
