@@ -12,6 +12,7 @@ Source0: %{name}-%{version}.tar.bz2
 License: LGPL
 Group: System/Libraries
 Url: http://localhost.nl/~synap/libvisual
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %if %mdkversion > 200600
 BuildRequires:	X11-devel
 %else
