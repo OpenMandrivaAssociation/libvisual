@@ -1,6 +1,6 @@
 %define name libvisual
 %define version 0.4.0
-%define release %mkrel 2
+%define release %mkrel 3
 %define major 0
 %define libname %mklibname visual %major
 
