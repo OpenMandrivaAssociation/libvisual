@@ -1,12 +1,11 @@
 %define name libvisual
 %define version 0.4.0
-%define release %mkrel 3
 %define major 0
 %define libname %mklibname visual %major
 
 Name: %{name}
 Version: %{version}
-Release: %{release}
+Release: %mkrel 4
 Summary: Audio visualisation framework
 Source0: %{name}-%{version}.tar.bz2
 License: LGPL
