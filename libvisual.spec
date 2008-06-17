@@ -5,7 +5,7 @@
 
 Name: %{name}
 Version: %{version}
-Release: %mkrel 4
+Release: %mkrel 5
 Summary: Audio visualisation framework
 Source0: %{name}-%{version}.tar.bz2
 License: LGPL
