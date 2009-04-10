@@ -8,6 +8,7 @@ Version: %{version}
 Release: %mkrel 5
 Summary: Audio visualisation framework
 Source0: %{name}-%{version}.tar.bz2
+Patch0: libvisual-0.4.0-fix-str-fmt.patch
 License: LGPL
 Group: System/Libraries
 Url: http://localhost.nl/~synap/libvisual
@@ -82,6 +83,7 @@ visualisation and those who actually write the visualisation plugins.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %configure2_5x
