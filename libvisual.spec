@@ -5,11 +5,10 @@
 
 Name: %{name}
 Version: %{version}
-Release: %mkrel 5
+Release: %mkrel 6
 Summary: Audio visualisation framework
 Source0: %{name}-%{version}.tar.bz2
-Patch0: libvisual-0.4.0-fix-str-fmt.patch
-License: LGPL
+License: LGPLv2+
 Group: System/Libraries
 Url: http://localhost.nl/~synap/libvisual
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -83,9 +82,11 @@ visualisation and those who actually write the visualisation plugins.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
+#gw the format string patch made gst crash:
+# https://qa.mandriva.com/show_bug.cgi?id=49801
+%define Werror_cflags %nil
 %configure2_5x
 %make
 
