@@ -5,7 +5,7 @@
 
 Name: %{name}
 Version: %{version}
-Release: %mkrel 7
+Release: %mkrel 8
 Summary: Audio visualisation framework
 Source0: %{name}-%{version}.tar.bz2
 Patch: libvisual-0.4.0-fix-str-fmt.patch
