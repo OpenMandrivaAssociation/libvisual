@@ -5,7 +5,7 @@
 
 Name: %{name}
 Version: %{version}
-Release: %mkrel 8
+Release: %mkrel 9
 Summary: Audio visualisation framework
 Source0: %{name}-%{version}.tar.bz2
 Patch: libvisual-0.4.0-fix-str-fmt.patch
@@ -35,6 +35,7 @@ Summary: Shared library of the audio visualisation framework
 Provides: %name = %version-%release
 Obsoletes: libvisual-plugins < 0.4.0
 Conflicts: gstreamer0.10-libvisual <= 0.10.7-1mdk
+Suggests: libvisual-plugins
 
 %description -n %libname
 Libvisual is a library that acts as a middle layer between
