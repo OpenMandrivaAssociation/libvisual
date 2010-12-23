@@ -2,6 +2,7 @@
 %define version 0.4.0
 %define major 0
 %define libname %mklibname visual %major
+%define develname %mklibname -d visual
 
 Name: %{name}
 Version: %{version}
@@ -13,11 +14,6 @@ License: LGPLv2+
 Group: System/Libraries
 Url: http://localhost.nl/~synap/libvisual
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-%if %mdkversion > 200600
-BuildRequires:	X11-devel
-%else
-BuildRequires:	X11-devel
-%endif
 
 %description
 Libvisual is a library that acts as a middle layer between
@@ -59,13 +55,14 @@ visualisation and those who actually write the visualisation plugins.
 
 #--------------------------------------------------------------------
 
-%package -n %libname-devel
+%package -n %develname
 Group: Development/C
 Summary: Header files of the audio visualisation framework 
 Requires: %libname = %version
 Provides: libvisual-devel = %version-%release
+Obsoletes: %{_lib}visual0-devel < %version-%release
 
-%description -n %libname-devel
+%description -n %develname
 Libvisual is a library that acts as a middle layer between
 applications that want audio visualisation and audio visualisation
 plugins.
@@ -73,7 +70,7 @@ plugins.
 Libvisual is aimed at developers who have a need for audio
 visualisation and those who actually write the visualisation plugins.
 
-%files -n %libname-devel
+%files -n %develname
 %defattr(-,root,root)
 %_includedir/*
 %_libdir/*.so
