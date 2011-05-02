@@ -81,7 +81,7 @@ visualisation and those who actually write the visualisation plugins.
 
 %prep
 %setup -q
-%patch
+%patch -p0
 
 %build
 %configure2_5x
