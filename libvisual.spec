@@ -41,13 +41,6 @@ plugins.
 Libvisual is aimed at developers who have a need for audio
 visualisation and those who actually write the visualisation plugins.
 
-%if %mdkversion < 200900
-%post -n %libname -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libname -p /sbin/ldconfig
-%endif
-
 %files -n %libname -f %name-0.4.lang
 %defattr(-,root,root)
 %doc README NEWS TODO ChangeLog AUTHORS
@@ -74,7 +67,6 @@ visualisation and those who actually write the visualisation plugins.
 %defattr(-,root,root)
 %_includedir/*
 %_libdir/*.so
-%_libdir/*.la
 %_libdir/pkgconfig/*
 
 #--------------------------------------------------------------------
