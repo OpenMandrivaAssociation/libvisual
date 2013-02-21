@@ -9,11 +9,10 @@ Version: %{version}
 Release: %mkrel 12
 Summary: Audio visualisation framework
 Source0: %{name}-%{version}.tar.bz2
-Patch: libvisual-0.4.0-fix-str-fmt.patch
+Patch0: libvisual-0.4.0-fix-str-fmt.patch
 License: LGPLv2+
 Group: System/Libraries
 Url: http://localhost.nl/~synap/libvisual
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Libvisual is a library that acts as a middle layer between
@@ -41,15 +40,7 @@ plugins.
 Libvisual is aimed at developers who have a need for audio
 visualisation and those who actually write the visualisation plugins.
 
-%if %mdkversion < 200900
-%post -n %libname -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libname -p /sbin/ldconfig
-%endif
-
 %files -n %libname -f %name-0.4.lang
-%defattr(-,root,root)
 %doc README NEWS TODO ChangeLog AUTHORS
 %_libdir/libvisual-0.4.so.%{major}*
 
@@ -71,7 +62,6 @@ Libvisual is aimed at developers who have a need for audio
 visualisation and those who actually write the visualisation plugins.
 
 %files -n %develname
-%defattr(-,root,root)
 %_includedir/*
 %_libdir/*.so
 %_libdir/pkgconfig/*
@@ -80,22 +70,15 @@ visualisation and those who actually write the visualisation plugins.
 
 %prep
 %setup -q
-%patch -p0
+%patch0 -p0
 
 %build
 %configure2_5x
 %make
 
 %install
-rm -rf %buildroot
-
 %makeinstall_std
 %find_lang %name-0.4
-
-%clean
-rm -rf %buildroot
-
-
 
 
 
