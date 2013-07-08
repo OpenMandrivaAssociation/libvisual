@@ -1,5 +1,5 @@
---- libvisual/lv_plugin.c.str	2009-04-10 10:07:41.000000000 +0200
-+++ libvisual/lv_plugin.c	2009-04-10 10:08:08.000000000 +0200
+--- ./libvisual/lv_plugin.c.str	2009-04-10 10:07:41.000000000 +0200
++++ ./libvisual/lv_plugin.c	2009-04-10 10:08:08.000000000 +0200
 @@ -442,11 +442,11 @@
  				
  				visual_list_add (list, ref);
