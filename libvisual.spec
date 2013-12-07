@@ -6,7 +6,7 @@
 Summary:	Audio visualisation framework
 Name:		libvisual
 Version:	0.4.0
-Release:	15
+Release:	16
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://localhost.nl/~synap/libvisual
