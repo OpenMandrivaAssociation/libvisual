@@ -48,7 +48,7 @@ This package includes the development files for %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure2_5x
