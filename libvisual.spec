@@ -9,7 +9,7 @@ Version:	0.4.0
 Release:	24
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://localhost.nl/~synap/libvisual
+Url:		https://localhost.nl/~synap/libvisual
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		libvisual-0.4.0-fix-str-fmt.patch
 Patch1:		libvisual-0.4.0-better-altivec-detection.patch
